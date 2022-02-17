@@ -54,13 +54,13 @@ sorted_lst2 = bubble_sort_updated(orig_lst.copy())
 print(orig_lst)
 print(sorted_lst1)
 
-print(timeit("bubble_sort", globals=globals(), number=1000))
-print(timeit("bubble_sort_updated", globals=globals(), number=1000))
+print(timeit("bubble_sort(orig_lst.copy())", globals=globals(), number=1000))
+print(timeit("bubble_sort_updated(orig_lst.copy())", globals=globals(), number=1000))
 
 
 '''
-3.0500000000002747e-05 - orig 
-2.869999999999956e-05 - updated 
+0.6605806 - orig
+0.05236150000000006 - updated 
 Улучшенная версия может быть полезна в тех случаях где список уже может быть частично отсортированным, тем самым алгоритм
 сразу отсеивает такие моменты и работает быстрее 
 '''
